@@ -1,35 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int x,z;
-    char y;
-    cin>>x;
-    int n = x*2;
-    int l = 1;
-    int top = 3;
-    int mid = 2;
-    int bot = 1;
-    for (int i = 1; i <=3; i++)
+void fibo(int k){
+    int num1 = 0;
+    int num2 = 1;
+    int sum = 0;
+    for (int i = 1; i <=k; i++)
     {
-        for (int j = 0; j<=x; j++)
-        {   
-            if(i == 1 && j == top){
-                cout<<"* ";
-                top+=4;
-            }else if (i == 2 && j == mid)
-            {
-                cout<<"* ";
-                mid+=2;
-            }else if (i == 3 && j == bot)
-            {
-                cout<<"* ";
-                bot+=4;
-            }else{
-                cout<<"  ";
-            }
-        }
-        cout<<endl;
+        cout<<num1<<endl;
+        sum = num1 + num2;
+        num1 = num2;
+        num2 = sum;
+
     }
-    return 0; 
+    
+}
+
+int main(){
+    int x,y,z;
+    cin>>x;
+    fibo(x);
+    return 0;
 }
