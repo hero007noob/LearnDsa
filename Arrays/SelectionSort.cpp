@@ -5,14 +5,13 @@ using namespace std;
 void selectionSort(int size,int arr[]){
     for (int i = 0; i < size-1; i++)
     {
+        int minIdx = i;
         for (int j = i; j < size; j++)
         {
-            if(arr[j]<arr[i]){
-                int temp = arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp; 
-            }
+            if(arr[j]<arr[minIdx])
+                minIdx = j;
         }
+        swap(arr[i],arr[minIdx]);
     }  
 }
 int main()

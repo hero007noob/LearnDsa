@@ -21,8 +21,10 @@ for (int i = 0; i < n; i++){
         sum+=arr[i];
     }
     if(sum>s){
+        while(sum>s){
         sum-=arr[index];
         index++;
+        }
     }
     if(sum == s){
     cout<<index+1<<" "<<i+1;
